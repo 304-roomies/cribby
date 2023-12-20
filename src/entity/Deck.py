@@ -1,28 +1,30 @@
-from Card import Card
+from .Card import Card
 import random
 
-class Deck():
+class Deck:
 
 
     def __init__(self):
+
+        self.deck = set()
         
-        self.deck = self.init_deck()
+        self.shuffle()
 
-        print(self.deck)
+        # print("Deck: ", self.deck)
 
 
-    def init_deck():
+    def shuffle(self):
 
-        deck = set()
-        
-        for i in range(len(52)):
-            val,face  = i % 13
-            suit = i / 13
+        self.deck.clear()
+
+        for i in range(0, 52):
+            val = face = i % 13 + 1
+            suit = int(i / 13)
             if (val > 10):
                 val = 10
             card = Card(val, suit, face)
-            deck.add(card)
-        return deck
+            self.deck.add(card)
+ 
 
 
     def get_card(self):
