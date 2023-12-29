@@ -1,2 +1,2 @@
-# 304 Cribbage Application 🤓
+# Cribbage Board Game Application
 
