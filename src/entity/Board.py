@@ -19,10 +19,13 @@ class Board:
     def init_players(self, players):
         return [Player(name=player) for player in players]
 
-    def get_winner():
-        return
+    def get_winner(self):
+        return self.winner
 
-    # Return an ordered list of players, ex. [Player 2, Player 0, Player 1]
+    def add_points(player, num):
+        # TODO: Will add num points to the specified player and check if that player has won
+
+        # Return an ordered list of players, ex. [Player 2, Player 0, Player 1]
 
     def choose_player_order(self):
         cards = []        # Represents the cards randomly selected for players
